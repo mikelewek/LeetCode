@@ -24,6 +24,7 @@ public class Solution {
         {
             return MinDepth(root.left) + 1;
         }
+        
         return Math.Min(MinDepth(root.left), MinDepth(root.right)) + 1;
     }
 }
