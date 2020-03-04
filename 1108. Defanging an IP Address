@@ -1,0 +1,19 @@
+public class Solution {
+    public string DefangIPaddr(string address) {
+        
+        StringBuilder s = new StringBuilder();
+        foreach(var i in address)
+        {
+            if(i == '.')
+            {
+               s.Append("[" + i + "]"); 
+            }
+            else 
+            {
+                s.Append(i);
+            }
+        }
+        
+        return s.ToString();
+    }
+}
