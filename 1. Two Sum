@@ -1,3 +1,34 @@
+// optimized
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        
+        if(nums.Length <= 0) 
+        {
+            return null;
+        }
+        
+        Hashtable table = new Hashtable();
+        table[nums[0]] =  0;
+        for (int i = 1; i < nums.Length; i++)
+        {
+            int complement = target - nums[i];
+
+            if (table.Contains(complement))
+            {
+                return new int[2]{(int) table[complement],i};
+            }
+
+            var first = target - complement;
+            if (!table.Contains(first))
+            {
+                table[first] =  i;
+            }
+        }
+
+        return null;
+    }
+}
+
 // brute force
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
