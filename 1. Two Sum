@@ -24,9 +24,9 @@ public class Solution {
             }
             
             if (second > 0)
-                {
-                    break;
-                }
+            {
+                break;
+            }
         }
 
         return new int[] { first, second };
