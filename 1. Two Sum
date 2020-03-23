@@ -15,7 +15,7 @@ public class Solution {
 
             if (table.Contains(complement))
             {
-                return new int[2]{(int) table[complement],i};
+                return new int[2]{(int) table[complement], i};
             }
 
             var first = target - complement;
