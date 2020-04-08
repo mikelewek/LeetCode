@@ -3,10 +3,16 @@ public class Solution {
         
         int max = 0;
         int spaceCount = 0;
-        s = s.Trim();
+        int spaceEndCheck = 1;
         
         for(int i = s.Length - 1; i >= 0; i--)
-        {
+        {           
+            if (s[s.Length - spaceEndCheck] == ' ') 
+            {
+                spaceEndCheck++;
+                continue;
+            }
+            
             if(s[i] == ' ')
             {
                 spaceCount++;        
