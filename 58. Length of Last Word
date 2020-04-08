@@ -2,7 +2,6 @@ public class Solution {
     public int LengthOfLastWord(string s) {
         
         int max = 0;
-        int spaceCount = 0;
         int spaceEndCheck = 1;
         
         for(int i = s.Length - 1; i >= 0; i--)
@@ -14,13 +13,8 @@ public class Solution {
             }
             
             if(s[i] == ' ')
-            {
-                spaceCount++;        
-                
-                if(spaceCount == 1)
-                {
-                    break;
-                }              
+            {                
+                break;       
             }
             
             max++;
