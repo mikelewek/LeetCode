@@ -1,0 +1,25 @@
+public class Solution {
+    public int LengthOfLastWord(string s) {
+        
+        int max = 0;
+        int spaceCount = 0;
+        s = s.Trim();
+        
+        for(int i = s.Length - 1; i >= 0; i--)
+        {
+            if(s[i] == ' ')
+            {
+                spaceCount++;        
+                
+                if(spaceCount == 1)
+                {
+                    break;
+                }              
+            }
+            
+            max++;
+        }
+        
+        return max;
+    }
+}
